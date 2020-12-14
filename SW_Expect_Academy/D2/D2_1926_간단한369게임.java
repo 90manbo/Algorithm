@@ -9,16 +9,15 @@ import java.io.InputStreamReader;
 
 public class D2_1926_간단한369게임 {
 
-	public static void main(String[] args) throws IOException{
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		int N = Integer.parseInt(br.readLine().trim());
-		
 
-		for(int i = 1; i<N+1; i++) {
+		int N = Integer.parseInt(br.readLine().trim());
+
+		for (int i = 1; i < N + 1; i++) {
 			String result = Integer.toString(i);
-			if(result.contains("3") || result.contains("6") || result.contains("9")) {
-				
+			if (result.contains("3") || result.contains("6") || result.contains("9")) {
+
 				result = result.replace("3", "-");
 				result = result.replace("6", "-");
 				result = result.replace("9", "-");
@@ -29,9 +28,9 @@ public class D2_1926_간단한369게임 {
 				result = result.replace("5", "");
 				result = result.replace("7", "");
 				result = result.replace("8", "");
-				
+
 			}
-			System.out.print(result+" ");
+			System.out.print(result + " ");
 		}
 	}
 
