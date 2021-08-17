@@ -1,18 +1,24 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class BOJ_2440_º°Âï±â3 {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int N = sc.nextInt();
-		for (int i = 0; i <N; i++) {
-			for (int j = N-i; j >0; j--) {
+	public static void main(String[] args) throws IOException {
 
-				System.out.print("*");
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+		int N = Integer.parseInt(br.readLine());
+		for (int i = 0; i < N; i++) {
+			for (int j = i; j < N; j++) {
+				bw.write("*");
 			}
-			System.out.println();
+			bw.newLine();
 		}
-		sc.close();
+		bw.flush();
+		bw.close();
 	}
-
 }

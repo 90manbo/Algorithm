@@ -2,19 +2,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BOJ_11721_열개씩끊어출력하기 {
+public class BOJ_2739_구구단 {
+
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
-
-		String line = br.readLine();
-
-		for (int i = 0; i < line.length(); i++) {
-			if (i % 10 == 0 && i != 0) {
-				sb.append("\n");
-			}
-			sb.append(line.charAt(i));
-
+		int N = Integer.parseInt(br.readLine());
+		for (int i = 1; i < 10; i++) {
+			int tmpResult = N;
+			tmpResult *= i;
+			sb.append(N).append(" * ").append(i).append(" = ").append(tmpResult).append("\n");
 		}
 		System.out.println(sb);
 	}
